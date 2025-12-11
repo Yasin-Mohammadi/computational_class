@@ -12,4 +12,4 @@ Computational Class 1404 Resources
 
 - CA fundamental
 - Ex 1: Game Of Life
-- Ex 2: City Groth
+- Ex 2: City Growth

@@ -74,12 +74,35 @@ def make_glider(size: int = 30) -> np.ndarray:
     """
     grid = np.zeros((size, size), dtype=int)
     # Glider pattern near top-left corner
-    pattern = np.array([
+    pattern1 = np.array([
         [0, 1, 0],
         [0, 0, 1],
         [1, 1, 1]
     ])
-    grid[1:4, 1:4] = pattern
+
+    pattern2 = np.array([
+        [1, 1, 1],
+        [1, 1, 1],
+        [1, 1, 1]
+    ])
+
+    pattern3 = np.array([
+        [0, 1, 0],
+        [0, 1, 0],
+        [0, 1, 0]
+    ])
+
+    pattern4 = np.array([
+        [0, 1, 0],
+        [1, 1, 1],
+        [0, 1, 0]
+    ])
+
+    grid[1:4, 1:4] = pattern1
+    grid[5:8, 5:8] = pattern2
+    grid[11:14, 11:14] = pattern3
+    grid[11:14, 1:4] = pattern4
+
     return grid
 
 if __name__ == "__main__":
